@@ -12,6 +12,7 @@ const Button: ParentComponent<ButtonProps> =  (props) => {
         shape = 'square',
         disabled = false,
         status = 'default',
+        onClick
     } = props;
 
     return (
@@ -22,7 +23,7 @@ const Button: ParentComponent<ButtonProps> =  (props) => {
             [`crystal-btn-shape-${shape}`]: true,
             [`crystal-btn-${type === 'default' ? 'secondary' : type}`]: true,
             [`crystal-btn-disabled`]: disabled,
-        }}>{props.children}</button>
+        }} onClick={onClick}>{props.children}</button>
     )
 }
 

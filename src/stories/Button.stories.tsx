@@ -84,13 +84,13 @@ export const Status: Story = {
   )
 };
 
-// export const Event: Story = {
-//   render: () => (
-//     <>
-//       <div> 事件</div>
-//       <section style={{ display: 'flex', gap: '20px' }}>
-//         <Button type="primary" status="primary" onClick$={(...rest) => console.log(...rest)}>primary</Button>
-//       </section>
-//     </>
-//   )
-// };
+export const Event: Story = {
+  render: () => (
+    <>
+      <div> 事件</div>
+      <section style={{ display: 'flex', gap: '20px' }}>
+        <Button type="primary" status="primary" onClick={console.log}>primary</Button>
+      </section>
+    </>
+  )
+};

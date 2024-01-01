@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from 'storybook-solidjs';
 
 import InputGroup from '../components/input-group';
+import Button from '../components/button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/solid/writing-stories/introduction
 const meta = {
@@ -39,6 +40,19 @@ export const Size: Story = {
         <section><InputGroup size="small" /></section>
         <section><InputGroup size="default" /></section>
         <section><InputGroup size="large" /></section>
+      </section>
+    </>
+  )
+};
+
+export const AddBeforeAndAfter: Story = {
+  render: () => (
+    <>
+      <div>addBefore & addAfter</div>
+      <section style={{ display: 'flex', gap: '20px' }}>
+        <section><InputGroup addBefore="https://" /></section>
+        <section><InputGroup addAfter="RMB" /></section>
+        <section><InputGroup addAfter={<Button>search</Button>} /></section>
       </section>
     </>
   )

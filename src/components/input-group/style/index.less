@@ -1,0 +1,73 @@
+.crystal-input-group-wrapper {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top
+}
+
+.crystal-input-group {
+    display: table;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+}
+
+
+.crystal-input-group>:first-child {
+    border-top-left-radius: var(--border-radius-small);
+    border-bottom-left-radius: var(--border-radius-small)
+}
+
+.crystal-input-group>:last-child {
+    border-top-right-radius: var(--border-radius-small);
+    border-bottom-right-radius: var(--border-radius-small)
+}
+
+.crystal-input-group-addafter,
+.crystal-input-group-addbefore {
+    width: 1px;
+    display: table-cell;
+    white-space: nowrap;
+    height: 100%;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0 12px;
+    color: var(--color-text-1);
+    background-color: var(--color-fill-2);
+    border: 1px solid transparent
+}
+
+.crystal-input-group-addafter>svg,
+.crystal-input-group-addbefore>svg {
+    font-size: 14px
+}
+
+.crystal-input-group-addafter {
+    border-left: 1px solid var(--color-neutral-3)
+}
+
+.crystal-input-group-addbefore {
+    border-right: 1px solid var(--color-neutral-3)
+}
+
+
+.crystal-input-group-wrapper .crystal-input-group-addafter .crystal-input {
+    width: auto;
+    height: 100%;
+    margin: -1px -13px -1px -12px;
+    border-color: transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.crystal-input-group-wrapper.crystal-input-custom-height .crystal-input-group-addbefore .crystal-select.crystal-select-single .crystal-select-view,
+.crystal-input-group-wrapper.crystal-input-custom-height .crystal-input-inner-wrapper,
+.crystal-input-group-wrapper.crystal-input-custom-height .crystal-input-inner-wrapper .crystal-input,
+.crystal-input-group-wrapper.crystal-input-custom-height .crystal-input-inner-wrapper .crystal-input-clear-wrapper,
+.crystal-input-group-wrapper.crystal-input-custom-height .crystal-input-inner-wrapper .crystal-input-clear-wrapper .crystal-input,
+.crystal-input-group-wrapper .crystal-input-inner-wrapper {
+    height: 100%
+}
+
+.crystal-input-group-wrapper.crystal-input-disabled {
+    cursor: not-allowed
+}

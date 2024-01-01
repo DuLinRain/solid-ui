@@ -1,4 +1,4 @@
-import { Component } from 'solid-js';
+import { JSX } from 'solid-js';
 import { InputSizes, InputStatus } from './constant';
 
 // 大小
@@ -12,8 +12,8 @@ interface InputProps {
     disabled?: boolean;
     value?: string;
     defaultValue?: string;
-    prefix?: Component;
-    suffix?: Component;
+    prefix?: JSX.Element;
+    suffix?: JSX.Element;
     onFocus?: () => void;
     onBlur?: () => void;
     onChange?: (value: string, e: InputEvent) => void;

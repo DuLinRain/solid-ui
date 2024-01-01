@@ -1,9 +1,9 @@
-import { Component } from 'solid-js';
+import { JSX } from 'solid-js';
 import { InputProps } from '../input/type';
 
 interface InputGroupProps extends InputProps {
-    prefix?: Component;
-    suffix?: Component;
+    addBefore?: JSX.Element;
+    addAfter?: JSX.Element;
 }
 
 export type { InputGroupProps };

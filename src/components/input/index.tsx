@@ -1,10 +1,10 @@
-import { ParentComponent, createSignal } from 'solid-js';
+import { ParentComponent, createSignal, Show } from 'solid-js';
 import cx from 'classnames';
 import type { InputProps } from './type';
 import "../global.less";
 import './style/index.less';
 
-const Input: ParentComponent<InputProps> =  (props) => {
+const Input: ParentComponent<InputProps> = (props) => {
     const {
         className,
         size = 'default',
@@ -29,6 +29,7 @@ const Input: ParentComponent<InputProps> =  (props) => {
             [`crystal-input-inner-wrapper-${status}`]: Boolean(status),
             [`crystal-input-inner-wrapper-disabled`]: disabled,
         }}>
+            <Show when={prefix}><span classList={{ ["crystal-input-group-prefix"]: true }}>{prefix}</span></Show>
             <input
                 onFocus={() => {
                     setFocus(true);
@@ -52,6 +53,7 @@ const Input: ParentComponent<InputProps> =  (props) => {
                 value={value()}
                 disabled={disabled}
             />
+            <Show when={suffix}><span classList={{ ["crystal-input-group-prefix"]: true }}>{suffix}</span></Show>
         </span>
     )
 }

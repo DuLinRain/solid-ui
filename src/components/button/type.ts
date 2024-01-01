@@ -20,6 +20,7 @@ interface BaseButtonProps {
     ghost?: boolean;
     danger?: boolean;
     block?: boolean;
+    onClick?: (e: MouseEvent) => void;
     [key: `data-${string}`]: string;
     classNames?: { icon: string };
 }
